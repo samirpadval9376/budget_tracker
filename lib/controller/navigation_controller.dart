@@ -1,8 +1,5 @@
-import 'dart:developer';
-
 import 'package:budget_tracker/views/components/home_component.dart';
 import 'package:budget_tracker/views/screens/category_page.dart';
-import 'package:budget_tracker/views/screens/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -12,11 +9,9 @@ class NavigationController extends GetxController {
     initialPage: 0,
   );
   List<Widget> pages = [
-    HomeComponent(),
-    CategoryPage(),
+    const HomeComponent(),
+    const CategoryPage(),
   ];
-
-  NavigationController() {}
 
   changeIndex({required int index}) {
     selectedIndex(index);
